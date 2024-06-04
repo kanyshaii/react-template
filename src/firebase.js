@@ -23,7 +23,7 @@ const auth = getAuth(app);
 export const storage = getStorage(app);
 
 export const categoryCollection = collection(db, "categories");
-export const productsCollection = collection(db, "products");
+export const productsCollection = collection(db, "product");
 export const ordersCollection = collection(db, "orders");
 
 const provider = new GoogleAuthProvider();

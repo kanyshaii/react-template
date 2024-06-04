@@ -8,8 +8,8 @@ export default function AddProduct({ category }) {
   const { user } = useContext(AppContext);
   const [name, setName] = useState("");
   const [price, setPrice] = useState(0);
-  const [picture, setPicture] = useState(null);
-  const [description, setDescription] = useState("");
+  const [img, setPicture] = useState(null);
+  const [desc, setDescription] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   if (!user || !user.isAdmin) {
@@ -33,20 +33,20 @@ export default function AddProduct({ category }) {
   function onFormSubmit(event) {
     event.preventDefault();
 
-    if (!picture) {
-      alert("Please upload an picture");
+    if (!img) {
+      alert("Please upload an img");
       return;
     }
 
     setIsSubmitting(true);
-    uploadProductPhoto(picture)
+    uploadProductPhoto(img)
       .then((pictureUrl) =>
         addDoc(productsCollection, {
           category: category.id,
           name: name,
           price: Number(price),
-          picture: pictureUrl,
-          description: description,
+          img: pictureUrl,
+          desc: desc,
           slug: name.replaceAll(" ", "-").toLowerCase(),
         })
       )
@@ -91,10 +91,10 @@ export default function AddProduct({ category }) {
           />
         </label>
         <label>
-          Picture:
+          Img:
           <input
             type="file"
-            name="picture"
+            name="img"
             onChange={onChangePicture}
             required
           />
@@ -103,8 +103,8 @@ export default function AddProduct({ category }) {
           Description:
           <textarea
             type=""
-            name="description"
-            value={description}
+            name="desc"
+            value={desc}
             onChange={onChangeDescription}
             required
           />
