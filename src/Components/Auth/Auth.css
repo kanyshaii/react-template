@@ -1,10 +1,9 @@
 .Auth {
   white-space: nowrap;
 }
-.Auth .blueBtn {
+.Auth button {
   background-color: #021437;
-  border: 0;
-  padding: 5px 10px;
+  padding: 13px 22px 17px;  
   color: white;
   border-radius: 5px;
   font-family: inherit;
@@ -12,13 +11,26 @@
   transition: all 100ms linear;
   cursor: pointer;
 }
-.Auth .blueBtn:hover {
-  background-color: #2956b1;
+.Auth button:hover {
+  /* background-color: #dde0e6;
+  color: black;
+  border: 10px black; */
+color: #000;
+background-color: #fff;
+border: 1px solid #2c2f24;
 }
-.Auth .icon {
-  background-color: transparent;
+
+.Auth .photoURL {
+  /* background-color: transparent;
   border: none;
   font-size: 20px;
   transform: translateY(3px);
-  display: none;
+  display: none; */
+  border-radius: 100%;
+  margin: 10px;
+  width: 30px;
+}
+.Auth span{
+  align-items: center;
+    display: flex;
 }

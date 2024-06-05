@@ -9,7 +9,7 @@ const Footer = () => {
       <div className="container">
         <div className="row">
           <div className="col-md-3">
-            <h3>Site Map</h3>
+            <h3>Menu</h3>
             <ul>
               <li>
                 <Link to="/">Home</Link>

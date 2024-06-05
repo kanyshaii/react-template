@@ -2,8 +2,7 @@ import "./Header.css";
 import Logo from "../Logo/Logo";
 import CartLink from "../CartLink/CartLink";
 import Auth from "../Auth/Auth";
-import Menu from "../Menu/Menu";
-
+import Nav from "../Nav/Nav"
 export default function HeaderSection() {
 
   return (
@@ -11,10 +10,10 @@ export default function HeaderSection() {
       <div className="container">
         <div className="Head flex">
           <Logo />
-          <Menu />
+          <Nav />
           <div className="buttons flex">
-            <Auth />
             <CartLink />
+            <Auth/>
           </div>
         </div>
       </div>
