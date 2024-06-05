@@ -4,7 +4,7 @@ header{
 .Head{
   align-items: center;
   position: relative;
-  padding-right: 35px;
+  /* padding-right: 35px; */
 }
 .Buttons {
   margin-left: 10px;

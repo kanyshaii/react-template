@@ -23,13 +23,13 @@ export default function Auth() {
             </NavLink>
           ) : null}
           <button className="Sign" onClick={LogOut}>
-            Sign out
+            SIGN OUT
           </button>
         </span>
       ) : (
         <span>
           <button className="Sign" onClick={LogIn}>
-            Sign in
+            SIGN IN
           </button>
         </span>
       )}

@@ -1,18 +1,18 @@
 .Nav{
     width: 60%;
     padding: 1.5rem;
-    display: flex;
   }
   .Nav .NavItem a {
-    color: #fff;
+    text-transform: uppercase;
+    font-size: 20px;
+    color: black ;
     font-weight: 500;
-    text-decoration: none;
     padding: 10px 20px;
+    display: inline-block;
+    line-height: 1;
   }
   
   .Nav ul {
-    padding: 0;
-    margin: 0;
     list-style-type: none;
     display: flex;
     list-style: none;
@@ -29,14 +29,14 @@
     }
   }
   
-  .Nav .NavItem a {
-    color: white;
+  /* .Nav .NavItem a {
+    color:black;
     display: inline-block;
     line-height: 1;
     text-decoration: none; 
-  }
+  } */
   .NavItem a:after {
-    background-color: white;
+    background-color: black;
     display: block;
     content: "";
     height: 2px; 
