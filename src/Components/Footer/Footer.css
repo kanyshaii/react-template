@@ -1,0 +1,137 @@
+Footer {
+    background: rgb(245, 245, 247);
+    padding: 25px 0
+    
+  }
+  Footer div.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  Footer div.row {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  Footer div.col-md-3 {
+    width: 20%;
+    margin: 20px;
+  }
+  Footer h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+  Footer ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  Footer ul li {
+    margin-bottom: 10px;
+  }
+  
+  Footer a {
+    color: #241313;
+    text-decoration: none;
+  }
+  Footer a:hover {
+    color: #A9A9A9;
+    transition: 0.3s;
+  }
+  Footer p {
+    margin: 0;
+    line-height: 1.5;
+  }
+  Footer .social-media {
+    display: flex;
+    gap: 20px;
+    width: 90px;
+    margin-top: 20px;
+  }
+  Footer .social-media li {
+    margin-right: 10px;
+  }
+  
+  Footer .social-media li:last-child {
+    margin-right: 0;
+  }
+  
+  Footer .social-media i {
+    color: #0c0c0c;
+    font-size: 30px;
+  }
+  Footer .social-media i:hover{
+    color: #A9A9A9;
+    transition: 0.3s;
+  }
+  
+  @media only screen and (max-width: 768px) {
+    Footer div.col-md-3 {
+      width: 50%;
+      margin: 20px 0;
+    }
+   
+  
+    Footer ul li {
+      margin-bottom: 5px;
+    }
+  
+    Footer ul li a {
+      font-size: 14px;
+    }
+  
+    Footer p {
+      font-size: 14px;
+    }
+  
+    Footer .social-media {
+      display: flex;
+      justify-content: space-evenly;
+      margin-top: 10px;
+    }
+  
+  
+    Footer .social-media i {
+      font-size: 25px;
+    }
+  }
+  @media only screen and (max-width: 480px) {
+    Footer div.col-md-3 {
+      width: 100%;
+      margin: 20px 0;
+    }
+  
+    Footer ul li {
+      margin-bottom: 5px;
+    }
+  
+    Footer ul li a {
+      font-size: 12px;
+    }
+  
+    Footer p {
+      font-size: 12px;
+    }
+  
+    Footer .social-media {
+      margin: 0 auto;
+    }
+  
+    Footer .social-media li {
+      margin-right: 5px;
+    }
+  
+    Footer .social-media i {
+      font-size: 14px;
+    }
+    Footer{
+      text-align: center;
+    }
+  }
+  .txt{
+    display: flex;
+    justify-content: space-between;
+  }
