@@ -12,7 +12,7 @@ import "./Nav.css";
           <NavLink to="/about">About</NavLink>
         </li>
         <li className="NavItem">
-          <NavLink to="/contacts">Contact</NavLink>
+          <NavLink to="/contacts">Contacts</NavLink>
         </li>
         <li className="NavItem">
           <NavLink to="/delivery">Delivery</NavLink>

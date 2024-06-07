@@ -1,5 +1,6 @@
 .CategoryList{
     background: rgb(245, 245, 247);
+    /* background-color: #fffffa; */
     padding: 10px 0;
 }
 .CategoryList a{
@@ -7,9 +8,17 @@
     padding: 3px 10px;
     transition: 0.3s;
 }
-.CategoryList a:hover{
+/* .CategoryList a:hover{
     background: rgb(214, 214, 215);;
-}
+
+} */
+.CategoryList a:hover {
+    font-weight: bold;
+    text-decoration: underline; /* Добавляем подчеркивание при наведении */
+  }
+
 .dropdownBtn{
     padding-bottom: 5px;
+    text-transform: uppercase;
+    font-weight: 700;
 }
