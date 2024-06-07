@@ -1,0 +1,95 @@
+.Contacts-container {
+    padding: 40px;
+    border-radius: 8px;
+    text-align: center;
+  }
+  
+  .Contacts-heading {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 30px;
+  }
+  
+  .Contact-details {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  .Contact-label {
+    font-weight: bold;
+  }
+  
+  .Contact-message {
+    font-size: 18px;
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 30px;
+  }
+  .contact-button {
+    padding: 12px 24px;
+    font-size: 20px;
+    background-color: #222;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .contact-button:hover {
+    background-color: #000;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .Contacts-container {
+      padding: 20px;
+    }
+  
+    .Contacts-heading {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+  
+    .Contact-details {
+      font-size: 16px;
+    }
+  
+    .contact-message {
+      font-size: 16px;
+    }
+  
+    .contact-button {
+      font-size: 18px;
+    }
+  }
+  
+  .Contact-icons{
+    display: flex;
+    justify-content: space-around;
+    margin-right: 50px;
+    margin-bottom: 40px;
+  }
+  
+   .social-media {
+    display: flex;
+    gap: 20px;
+    width: 90px;
+    margin-top: 20px;
+  }
+   .social-media li {
+    margin-right: 10px;
+  }
+  
+   .social-media li:last-child {
+    margin-right: 0;
+  }
+  
+   .social-media i {
+    color: #0c0c0c;
+    font-size: 30px;
+  }
+   .social-media i:hover{
+    color: #A9A9A9;
+    transition: 0.3s;
+  }
