@@ -67,7 +67,7 @@
   .Contact-icons{
     display: flex;
     justify-content: space-around;
-    margin-right: 50px;
+    margin-right: 140px;
     margin-bottom: 40px;
   }
   
@@ -92,4 +92,80 @@
    .social-media i:hover{
     color: #A9A9A9;
     transition: 0.3s;
+  }
+
+
+  .Message-form-container {
+    max-width: 500px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .Message-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .Message-form-label {
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #000;
+  }
+  
+  .Message-form-input,
+  .Message-form-textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #000;
+  }
+  
+  .Message-form-textarea {
+    height: 100px;
+    resize: vertical;
+  }
+  
+  .Message-form-button {
+    align-self: center;
+    text-transform: uppercase;
+    max-width: 270px;
+    font-size: 20px;
+    background-color: black;
+    padding: 13px 22px 17px;
+    color: white;
+    border-radius: 5px;
+    /* margin-left: 7px; */
+    transition: all 100ms linear;
+  }
+  
+  .Message-form-button:hover {
+    /* color: #000;
+    background-color: #fff;
+    border: 1px solid #2c2f24;   */
+    background-color:  rgba(0, 0, 0, 0.5);
+
+  }
+  
+  .Form-status {
+    margin-top: 10px;
+    color: green;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  @media (max-width: 768px) {
+    .Contacts-container {
+      padding: 10px;
+    }
+  
+    .Message-form-container {
+      padding: 10px;
+    }
   }
