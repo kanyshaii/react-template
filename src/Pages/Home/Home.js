@@ -1,12 +1,9 @@
 import React from 'react';
 import './Home.css';
 import  homeBg from '../../img/home.bg-1.webp';
-
-import promoImg from '../../img/promo.png';
 import Slider from "react-slick";
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 import video from '../../img/video.mp4'
-// Пример изображений для слайдера
 import slide1 from '../../img/slide1.jpg';
 import slide2 from '../../img/slide2.jpg';
 import slide3 from '../../img/slide3.jpg';
@@ -18,7 +15,15 @@ import three1 from '../../img/slide1.webp';
 import three2 from '../../img/slide2.webp';
 import three3 from '../../img/slide3.webp';
 
-const images = [slide1, slide2, slide3, shoulder1, shoulder2, shoulder3, shoulder4];
+const images = [
+  { image: slide1, link: "/products/furla-glove" },
+  { image: slide2, link: "/products/furla-glove-tote-m-nero" },
+  { image: slide3, link: "/products/furla-glove-tote-celestial-mediterra" },
+  { image: shoulder1, link: "/products/furla-club-2" },
+  { image: shoulder2, link: "/products/furla-nuvola-shoulder-bag-l-marshmallow" },
+  { image: shoulder3, link: "/products/furla-diamante-shoulder-bag-mini-ivy" },
+  { image: shoulder4, link: "/products/furla-club-2" }
+];
 
 const Home = () => {
   const sliderSettings = {
@@ -51,20 +56,9 @@ const Home = () => {
     <>
       <div className="Home">
         <div className="container">
-        {/* <div class="replicas">
-			<div class="replicas_in flex">
-				<div class="replicas_img">
-					<img src={homebg} alt=""/>
-				</div>
-				<div class="replicas_content">
-					<h2 class="replicas_tit">Реплики картин от<span class="dib"  > Ink. House</span></h2>
-					<p class="replicas_txt">Высокое качество отрисовки на плотной бумаге или льняном холсте. Редкие произведения, доступные цены.</p>
-					<button class="btn">Продукция</button>
-		</div>
-    </div>
-	</div> */}
+        
  <div className="intro-section">
-            <img src={homeBg} alt="Intro Image" className="intro-img" />
+            <img src={homeBg} alt="Intro" className="intro-img" />
             <div className="intro-content">
               <h2 className="intro-title">FURLA PRE-FALL 2024 COLLECTION</h2>
               <p className="intro-text">The excellence of Venice's renowned craftsmanship and 
@@ -75,32 +69,6 @@ const Home = () => {
               <a href='/about'     className="intro-btn">LEARN MORE</a>
             </div>
           </div>
-
-          {/* <div className="promo__content">
-            <div className="promo__text">
-              <div className="promo__title">
-                <span className="highlight">
-                  <span>LET’S</span>
-                </span>
-                EXPLORE
-                <span className="highlight highlight--yellow">
-                  <span>UNIQUE</span>
-                </span>
-                BAGS.
-              </div>
-              <div className="promo__desc">
-                Live for Influential and Innovative fashion!
-              </div>
-              <div className="promo__btn-wrapper">
-                <a href="/about" className="promo__btn">
-                  Read On
-                </a>
-              </div>
-            </div>
-            <div className="promo__img">
-              <img src={promoImg} alt="Promo" />
-            </div>
-          </div> */}
           <div className="Home_video">
             <video width="100%" height="auto" autoPlay muted loop>
               <source src={video} type="video/mp4"/>
@@ -108,17 +76,42 @@ const Home = () => {
           </div>
           <div className="Home_slider">
             <Slider {...sliderSettings}>
-              {images.map((img, index) => (
+              {images.map((slide, index) => (
                 <div key={index} className="slide">
                   <div className="overlay">
-                    <a href="/shop" className="shop-link">Shop</a>
+                    <a href= {slide.link} className="shop-link">Shop now</a>
                   </div>
-                  <img src={img} alt={`Slide ${index + 1}`} />
-                </div>
+                  <img src={slide.image} alt={`Slide ${index + 1}`} />                </div>
               ))}
             </Slider>
           </div>
-          
+          <div className="Delivery_desc">
+            <h1 className='delivery_tit'> ITALIAN HERITAGE
+
+
+</h1>
+            <p className="Delivery_txt">
+            Established in 1927 by aldo furlanetto in bologna, furla looks to the
+             future with a foot grounded in a solid past of time-honored craftsmanship,
+              artisanal expertise, a sense of beauty and innovative designs. an italian 
+              company with an international organization: this blending of people and cultures
+               ensures furla’s success around the
+            </p>
+            <p className="Delivery_txt">Stitch after stitch, expert artisans bring the 
+            furla collections to life using time-honored techniques that have elevated the 
+            brand’s quality standards to its now renowned levels of excellence in every corner
+             of the world.
+</p>
+<p className="Delivery_txt">
+at the end of 2017, furla set up a sustainability & csr department 
+and since then, the company has implemented a set of instruments such as
+ its new code of ethics, its suppliers' manual, and several policies that lay
+  down the company's values, as well as a strategy to drive new social and environmental 
+  responsibility projects.
+
+
+</p>
+          </div>
           <div className="three-images">
             <img src={three1} alt="Slide 1" />
             <img src={three2} alt="Slide 2" />
@@ -131,3 +124,9 @@ const Home = () => {
 }
 
 export default Home;
+
+
+
+
+
+
