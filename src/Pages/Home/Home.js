@@ -103,7 +103,7 @@ const Home = () => {
              of the world.
 </p>
 <p className="Delivery_txt">
-at the end of 2017, furla set up a sustainability & csr department 
+At the end of 2017, furla set up a sustainability & csr department 
 and since then, the company has implemented a set of instruments such as
  its new code of ethics, its suppliers' manual, and several policies that lay
   down the company's values, as well as a strategy to drive new social and environmental 
