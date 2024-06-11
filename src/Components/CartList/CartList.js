@@ -43,12 +43,10 @@ export default function CartList() {
       </div>
     ));
 
-  // Рассчитаем общую сумму
   const totalPrice = products
     .filter((product) => productIds.includes(product.id))
     .reduce((total, product) => total + cart[product.id] * product.price, 0);
 
-  // Рассчитаем общее количество товаров
   const totalItems = productIds.reduce((total, id) => total + cart[id], 0);
 
   return (
