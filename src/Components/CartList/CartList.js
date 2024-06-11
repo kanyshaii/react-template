@@ -10,7 +10,7 @@ export default function CartList() {
     setCart({
       ...cart,
       [product.id]: qty
-    })
+    });
   }
 
   function onItemRemove(product) {
@@ -31,20 +31,35 @@ export default function CartList() {
         <Link to={"/products/" + product.slug}>{product.name}</Link>
 
         <div className="inputs">
-        <input
-          type="number"
-          value={cart[product.name]}
-          min={1}
-          onChange={(event) => onQuantityChange(product, +event.target.value)} />
-        <span>${(cart[product.id] * product.price).toFixed(2)}</span>
-        <i className="fa-solid fa-xmark" onClick={() => onItemRemove(product)} />
-          </div>
+          <input
+            type="number"
+            value={cart[product.id]}
+            min={1}
+            onChange={(event) => onQuantityChange(product, +event.target.value)}
+          />
+          <span>${(cart[product.id] * product.price).toFixed(2)}</span>
+          <i className="fa-solid fa-xmark" onClick={() => onItemRemove(product)} />
+        </div>
       </div>
     ));
+
+  // Рассчитаем общую сумму
+  const totalPrice = products
+    .filter((product) => productIds.includes(product.id))
+    .reduce((total, product) => total + cart[product.id] * product.price, 0);
+
+  // Рассчитаем общее количество товаров
+  const totalItems = productIds.reduce((total, id) => total + cart[id], 0);
 
   return (
     <div className="CartList">
       {output}
+      <div className="totalPrice">
+        Items: {totalItems}
+      </div>
+      <div className="totalPrice">
+        Total Price: ${totalPrice.toFixed(2)}
+      </div>
     </div>
-  )
+  );
 }

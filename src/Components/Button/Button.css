@@ -1,4 +1,4 @@
-.Btn {
+/* .Btn {
   border-radius: 118px;
   border: 2px solid #2c2f24;
   transition: 0.3s;
@@ -12,4 +12,20 @@
 .Btn:hover {
   background: #2c2f24;
   color: #fff;
+} */
+.Btn{
+  font-size: 20px;
+    background-color: black;
+    padding: 13px 22px 17px;
+    color: white;
+    border-radius: 5px;
+    margin-left: 20px;
+    transition: all 100ms linear;
+
+}
+.Btn:hover {
+  background: #fff;
+  color: black;
+  border: 1px solid #2c2f24;
+
 }

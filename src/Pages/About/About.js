@@ -1,4 +1,5 @@
 import './About.css';
+import Title from '../../Components/Title/Title';
 import about1 from '../../img/About/about-1.jpg';
 import about2 from '../../img/About/about-2.jpg';
 import about3 from '../../img/About/about-3.jpg';
@@ -12,7 +13,7 @@ function About() {
   return (
     <section className="About">
       <div className="container">
-        <h2>ABOUT US</h2>
+        <Title>About us</Title>
         <div className="about-content">
           <div className="about-text">
             <h1 className="about-title">Furla world</h1>
@@ -21,26 +22,26 @@ function About() {
             </p>
           </div>
           <div className="about-image-container">
-            <img src={about4} alt="About Image" className="about-image" />
+            <img src={about4} alt="#" className="about-image" />
           </div>
         </div>
         <div className="image-container">
           <div className="image-wrapper">
-            <img src={about1} alt="Image 1" className="image" />
+            <img src={about1} alt="#" className="image" />
             <div className="image-overlay">
-              <a href="#" className='overplay-txt'>Shop now</a>
+              <a href="/products/furla-glove" className='overplay-txt'>Shop now</a>
             </div>
           </div>
           <div className="image-wrapper">
-            <img src={about2} alt="Image 2" className="image" />
+            <img src={about2} alt="#" className="image" />
             <div className="image-overlay">
-              <a href="#">Shop now</a>
+              <a href="products/furla-diamante-mini-bag-xl-nero">Shop now</a>
             </div>
           </div>
           <div className="image-wrapper">
-            <img src={about3} alt="Image 3" className="image" />
+            <img src={about3} alt="#" className="image" />
             <div className="image-overlay">
-              <a href="#">Shop now</a>
+              <a href="/products/furla-club">Shop now</a>
             </div>
           </div>
         </div>

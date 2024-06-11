@@ -3,44 +3,86 @@
   flex-wrap: wrap;
   justify-content: space-around;
 }
+
 .ProductList .product hr {
   border: 1px solid rgb(220, 220, 220);
   width: 90%;
+  display: none;
 }
+
 .ProductList .product {
   display: flex;
   flex-direction: column;
-  border: 1px solid rgb(220, 220, 220);
   border-radius: 5px;
   margin: 15px 0px;
   padding: 5px;
+  position: relative; /* Добавлено для позиционирования иконки корзины */
 }
+
 .ProductList .product img {
   width: 250px;
   height: 250px;
   background-color: white;
   transition: all 100ms linear;
+  margin-bottom: 20px;
+  position: relative; /* Добавлено для эффекта при наведении */
 }
+
 .ProductList .product:hover img {
   filter: opacity(80%);
+  background-color: rgba(255, 255, 255, 0.5); /* Белый фон с прозрачностью */
 }
+
+.ProductList .cart-icon {
+  position: absolute;
+  top: 10px;
+  left: 80px;
+  color: #333;
+  padding: 5px;
+  border: none;
+  border-radius: 50%;
+  display: none; /* Скрыто по умолчанию */
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.ProductList .product:hover .cart-icon {
+  display: block; /* Показано при наведении на продукт */
+}
+
 .product a {
   color: black;
   text-decoration: none;
   font-size: 20px;
   transition: all 100ms linear;
 }
+
 .product a:hover {
-  color: rgb(255, 130, 151);
+  color: rgba(0, 0, 0, 0.5);
 }
+
 .ProductList span {
   font-size: 20px;
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  margin-bottom: 20px;
 }
+
 .ProductList .text {
   max-width: 200px;
-  height: 90px;
-  margin: 0 10px;
+  margin: 0 30px;
+  text-align: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 18px;
 }
-.ProductList .actions {
-  margin: 0 0 10px 10px;
+
+
+.description {
+  font-size: 17px;
+  color: #666;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 8px;
 }

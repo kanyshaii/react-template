@@ -11,10 +11,10 @@ export default function OrderForm({ active, setActive }) {
   const navigate = useNavigate();
 
   if (Object.keys(cart).length === 0) {
-    return "Your cart is empty";
+    return "YOUR CART IS EMPTY";
   }
   if (!user) {
-    return "(Please log in)";
+    return "(PLEASE LOG IN)";
   }
 
 

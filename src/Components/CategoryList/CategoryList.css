@@ -1,24 +1,106 @@
-.CategoryList{
+.CategoryList {
     background: rgb(245, 245, 247);
-    /* background-color: #fffffa; */
     padding: 10px 0;
+    max-width: 300px;
+    margin: auto;
+    border-radius: 5px;
 }
-.CategoryList a{
+
+.CategoryList a {
     display: block;
     padding: 3px 10px;
     transition: 0.3s;
 }
-/* .CategoryList a:hover{
-    background: rgb(214, 214, 215);;
 
-} */
 .CategoryList a:hover {
     font-weight: bold;
-    text-decoration: underline; /* Добавляем подчеркивание при наведении */
-  }
+    text-decoration: underline;
+}
 
-.dropdownBtn{
-    padding-bottom: 5px;
+.dropdownBtn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
     text-transform: uppercase;
     font-weight: 700;
+    color: black;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.dropdownBtn i {
+    margin-left: 5px;
+    font-size: 0.8rem; /* Adjust size if needed */
+}
+
+.dropdownContent {
+    display: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.CategoryList:hover .dropdownContent {
+    display: block;
+}
+
+@media (max-width: 1024px) {
+    .CategoryList {
+        max-width: 80%;
+    }
+
+    .dropdownBtn {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 900px) {
+    .CategoryList {
+        max-width: 90%;
+    }
+
+    .dropdownBtn {
+        font-size: 16px;
+    }
+
+    .CategoryList a {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    .CategoryList {
+        max-width: 95%;
+    }
+
+    .dropdownBtn {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+
+    .CategoryList a {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .CategoryList {
+        max-width: 100%;
+        padding: 5px 0;
+    }
+
+    .dropdownBtn {
+        font-size: 12px;
+        padding: 8px 15px;
+    }
+
+    .CategoryList a {
+        font-size: 10px;
+        padding: 3px 8px;
+    }
 }
