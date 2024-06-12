@@ -3,7 +3,7 @@ import { AppContext } from "../../App";
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 
-export default function CartList() {
+export default function CartList({ setModalActive }) {
   const { products, cart, setCart } = useContext(AppContext);
 
   function onQuantityChange(product, qty) {
@@ -51,13 +51,16 @@ export default function CartList() {
 
   return (
     <div className="CartList">
-      {output}
-      <div className="totalPrice">
-        Items: {totalItems}
+      <div>
+        {output}
       </div>
-      <div className="totalPrice">
-        Total Price: ${totalPrice.toFixed(2)}
-      </div>
+      {totalItems > 0 && (
+        <div className="totalPrice">
+          <div>Items: {totalItems}</div>
+          <div>Total Price: ${totalPrice.toFixed(2)}</div>
+          <button className="order" onClick={() => setModalActive(true)}>Order</button>
+        </div>
+      )}
     </div>
   );
 }
