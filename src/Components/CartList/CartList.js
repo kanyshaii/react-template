@@ -37,7 +37,7 @@ export default function CartList({ setModalActive }) {
             min={1}
             onChange={(event) => onQuantityChange(product, +event.target.value)}
           />
-          <span>${(cart[product.id] * product.price).toFixed(2)}</span>
+          <span>${(cart[product.id] * product.price)}</span>
           <i className="fa-solid fa-xmark" onClick={() => onItemRemove(product)} />
         </div>
       </div>
@@ -49,7 +49,7 @@ export default function CartList({ setModalActive }) {
 
   const totalItems = productIds.reduce((total, id) => total + cart[id], 0);
 
-  return (
+  return (<div className="container">
     <div className="CartList">
       <div>
         {output}
@@ -57,10 +57,11 @@ export default function CartList({ setModalActive }) {
       {totalItems > 0 && (
         <div className="totalPrice">
           <div>Items: {totalItems}</div>
-          <div>Total Price: ${totalPrice.toFixed(2)}</div>
+          <div>Price: ${totalPrice}</div>
           <button className="order" onClick={() => setModalActive(true)}>Order</button>
         </div>
       )}
+    </div>
     </div>
   );
 }

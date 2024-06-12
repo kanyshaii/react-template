@@ -2,7 +2,6 @@ import { useContext, useState } from "react";
 import CartList from "../../Components/CartList/CartList";
 import OrderForm from "../../Components/OrderForm/OrderForm";
 import { AppContext } from "../../App";
-import Title from '../../Components/Title/Title';
 
 export function Cart() {
   const [modalActive, setModalActive] = useState(false);
@@ -19,10 +18,12 @@ export function Cart() {
   }
   if (!user) {
     return (
+      <div className="container">
       <div className="Cart">
         <h1>Cart</h1>
         <CartList setModalActive={setModalActive} />
         <OrderForm active={modalActive} setActive={setModalActive} />
+      </div>
       </div>
     )
   }

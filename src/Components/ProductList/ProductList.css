@@ -24,14 +24,14 @@
   height: 250px;
   background-color: white;
   /* transition: all 100ms linear; */
-  
+  transition: 0.8s;
   margin-bottom: 20px;
   position: relative; /* Добавлено для эффекта при наведении */
 }
 
 .ProductList .product:hover img {
   filter: opacity(80%);
-  background-color: rgba(255, 255, 255, 0.5); /* Белый фон с прозрачностью */
+  background-color: rgba(255, 255, 255, 0.5); 
 }
 
 .ProductList .cart-icon {
