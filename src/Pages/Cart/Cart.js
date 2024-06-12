@@ -20,7 +20,7 @@ export function Cart() {
   if (!user) {
     return (
       <div className="Cart">
-        <Title>Cart</Title>
+        <h1>Cart</h1>
         <CartList setModalActive={setModalActive} />
         <OrderForm active={modalActive} setActive={setModalActive} />
       </div>
